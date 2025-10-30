@@ -1,0 +1,114 @@
+:root {
+  --main-color: #cd5a5a;
+  --secondary-color: #bf4a4a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+    gap: 2rem;
+    margin: 5rem;
+}
+
+main h1 {
+    font-size: 2rem;
+    margin-top: 4rem;
+}
+
+.field {
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+}
+
+.field input {
+    padding: 0.8rem 1rem;
+    border: 2px solid #ccc;
+    border-right: none;
+    border-radius: 8px 0 0 8px;
+    outline: none;
+    width: 250px;
+}
+
+.field button {
+    padding: 0.8rem 1.2rem;
+    border: 2px solid var(--main-color);
+    border-radius: 0 8px 8px 0;
+    background-color: var(--main-color);
+    color: white;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.field button:hover {
+    background-color: var(--secondary-color);
+}
+
+.tasks-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.task-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task-container.done::before {
+    content: "";
+    position: absolute;
+    width: 40rem;
+    height: 2px;
+    background-color: black;
+}
+
+.task-container h2 {
+    font-size: 1.4rem;
+}
+
+.task-container .buttons-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.task-container .buttons-container button {
+    border: none;
+    background-color: transparent;
+    transition: 0.25s ease-in-out;
+}
+
+.task-container .buttons-container button#delete:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.task-container .buttons-container button#done:hover {
+    color: rgb(6, 205, 6);
+    cursor: pointer;
+}
+
+.task-container .buttons-container button#edit:hover {
+    color: orange;
+    cursor: pointer;
+}
